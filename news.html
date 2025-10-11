@@ -1101,9 +1101,11 @@ const popunderLinks = [
 ];
 
 let clickCount = 0;
-let requiredClicks = Math.floor(Math.random() * 4) + 7; // 7–10 clicks
+let requiredClicks = Math.floor(Math.random() * 4) + 7;
 let adsEnabled = true;
 let hasTriggeredPopunder = false;
+let scrollAdTriggered = false; // ✅ NEW: Scroll tracking
+let lastScrollTime = 0; // ✅ NEW: Time tracking
 
 function getRandomAd() {
   return adLinks[Math.floor(Math.random() * adLinks.length)];
@@ -1127,7 +1129,7 @@ function triggerPopunder() {
   hasTriggeredPopunder = true;
 }
 
-// 🖱 Click trigger
+// 🖱 Click trigger (අලුත්වැඩියා කරන ලද)
 document.body.addEventListener('click', () => {
   if (!adsEnabled) return;
   clickCount++;
@@ -1143,30 +1145,55 @@ document.body.addEventListener('click', () => {
     setTimeout(() => {
       adsEnabled = true;
       clickCount = 0;
-      requiredClicks = Math.floor(Math.random() * 4) + 7; // reset 7–10
+      requiredClicks = Math.floor(Math.random() * 4) + 7;
       hasTriggeredPopunder = false;
     }, 60000);
   }
 });
 
-// 🧭 Scroll trigger
+// 🧭 Scroll trigger (සම්පූර්ණයෙන්ම නවයි) ✅
 window.addEventListener('scroll', () => {
+  if (!adsEnabled || scrollAdTriggered) return;
+  
+  const currentTime = Date.now();
+  if (currentTime - lastScrollTime < 3000) { // 3 seconds minimum between scroll ads
+    return;
+  }
+  
+  // Check if user scrolled significantly (at least 300px)
+  const scrollY = window.scrollY || window.pageYOffset;
+  if (scrollY > 300) {
+    const randomAd = getRandomAd();
+    const adWindow = window.open(randomAd, '_blank');
+    
+    setTimeout(() => {
+      try { 
+        if (adWindow) {
+          adWindow.blur(); 
+          window.focus(); 
+        }
+      } catch(e) {}
+    }, 100);
+    
+    scrollAdTriggered = true;
+    lastScrollTime = currentTime;
+    
+    // Reset scroll trigger after 3 seconds
+    setTimeout(() => {
+      scrollAdTriggered = false;
+    }, 3000);
+  }
+});
+
+// ⏱ Auto popup every 12 seconds
+setInterval(() => {
   if (!adsEnabled) return;
   const randomAd = getRandomAd();
   const adWindow = window.open(randomAd, '_blank');
   setTimeout(() => {
     try { if (adWindow) adWindow.blur(); window.focus(); } catch(e) {}
   }, 100);
-});
-
-// ⏱ Auto popup every 12 seconds
-setInterval(() => {
-  const randomAd = getRandomAd();
-  const adWindow = window.open(randomAd, '_blank');
-  setTimeout(() => {
-    try { if (adWindow) adWindow.blur(); window.focus(); } catch(e) {}
-  }, 100);
-}, 2200);
+},4000);
 </script>
 
   <!-- Optional JavaScript -->
