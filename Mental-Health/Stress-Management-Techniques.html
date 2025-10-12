@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Best Sleep Clinics in London | Healthcare & Sleep Therapy</title>
+    
+    <style>
+        :root {
+            --black: #0A0A0F;
+            --dark: #16161D;
+            --glass: rgba(30, 30, 40, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --accent: #FF2D55;
+            --neon-pink: #FF2D55;
+            --neon-purple: #B13DFF;
+            --text: #F0F0F0;
+            --gold: #FFD700;
+            --soft-glow: rgba(255, 45, 85, 0.3);
+            --green: #00FF88;
+            --blue: #00AAFF;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--black);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Enhanced Glassmorphism Container */
+        .modern-container {
+            max-width: 700px;
+            margin: 20px;
+            padding: 40px;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 18px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        /* Performance Optimized Neon Glow */
+        .modern-container::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle at 30% 30%, var(--neon-pink), transparent 25%),
+                radial-gradient(circle at 70% 70%, var(--neon-purple), transparent 25%);
+            opacity: 0.1;
+            z-index: -1;
+            animation: float 20s infinite alternate ease-in-out;
+        }
+        
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-5%, 5%) rotate(1deg); }
+            100% { transform: translate(5%, -5%) rotate(-1deg); }
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--neon-pink), var(--gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(255, 45, 85, 0.3);
+        }
+        
+        .subtitle {
+            color: var(--text);
+            opacity: 0.85;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+        
+        /* Locked Content Area */
+        .locked-content {
+            text-align: center;
+            padding: 25px;
+            background: rgba(15, 15, 25, 0.6);
+            border-radius: 14px;
+            margin: 0 auto 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: inset 0 4px 25px rgba(0,0,0,0.15);
+        }
+        
+        .locked-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+        
+        .locked-content p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        /* Premium Unlock Button */
+        .unlock-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #111 !important;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 10px 0;
+            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+            box-shadow: 0 5px 25px rgba(255, 215, 0, 0.4);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255,255,255,0.4);
+            min-width: 200px;
+            cursor: pointer;
+        }
+        
+        .unlock-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 35px rgba(255, 215, 0, 0.6);
+        }
+        
+        .unlock-btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 15px rgba(255, 215, 0, 0.8);
+        }
+        
+        .unlock-btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Article Description Section */
+        .article-description {
+            text-align: left;
+            padding: 30px;
+            margin: 0 auto 25px;
+            max-width: 620px;
+            background: rgba(20, 20, 30, 0.7);
+            border-radius: 16px;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .article-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .article-description .category {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .article-description h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+            text-align: center;
+        }
+        
+        .article-intro {
+            font-size: 1.05rem !important;
+            font-weight: 500;
+            color: var(--gold);
+            opacity: 0.95 !important;
+            text-align: center !important;
+            margin-bottom: 25px !important;
+            padding: 15px;
+            background: rgba(255,215,0,0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(255,215,0,0.2);
+            line-height: 1.6;
+        }
+        
+        .article-description p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .section-title {
+            color: var(--neon-pink);
+            font-size: 1.3rem;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255,45,85,0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .clinic-section {
+            margin: 25px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .clinic-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .clinic-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--blue), var(--neon-purple));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+        
+        .clinic-title {
+            flex: 1;
+        }
+        
+        .clinic-section h4 {
+            color: var(--blue);
+            margin-bottom: 5px;
+            font-size: 1.3rem;
+        }
+        
+        .clinic-location {
+            color: var(--text);
+            opacity: 0.7;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .clinic-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+            border-left: 3px solid var(--green);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            background: rgba(255,255,255,0.06);
+            transform: translateX(5px);
+        }
+        
+        .feature-item i {
+            color: var(--green);
+            font-size: 1.1rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .feature-content {
+            flex: 1;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        
+        .feature-desc {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-top: 20px;
+            padding: 12px;
+            background: rgba(255,215,0,0.1);
+            border-radius: 8px;
+            justify-content: center;
+        }
+        
+        .treatment-section {
+            margin: 30px 0;
+        }
+        
+        .treatment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+        
+        .treatment-item {
+            background: linear-gradient(135deg, rgba(255,45,85,0.1), rgba(177,61,255,0.1));
+            padding: 15px 10px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            border: 1px solid rgba(255,45,85,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .treatment-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255,45,85,0.3);
+        }
+        
+        .info-box {
+            background: rgba(0,170,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border-left: 4px solid var(--blue);
+        }
+        
+        .info-box h5 {
+            color: var(--blue);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Loading Animation */
+        .unlock-process {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 25px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .loading-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.1);
+            border-top: 4px solid var(--gold);
+            margin: 15px auto;
+            animation: spin 1.3s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* Popup Styles */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: var(--glass);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            backdrop-filter: blur(12px);
+        }
+
+        .popup-content h3 {
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .popup-btn {
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+        }
+
+        .popup-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,45,85,0.4);
+        }
+        
+        /* Copyright Protection */
+        .copyright-notice {
+            position: fixed;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.35);
+            z-index: 1000;
+            pointer-events: none;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .modern-container {
+                margin: 15px;
+                padding: 30px 20px;
+                border-radius: 16px;
+                max-width: 500px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 0.85rem;
+            }
+            
+            .article-description {
+                padding: 25px;
+            }
+            
+            .treatment-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+            
+            .unlock-btn {
+                padding: 14px 28px;
+                min-width: 180px;
+                font-size: 0.95rem;
+            }
+            
+            .locked-content {
+                padding: 20px;
+                border-radius: 12px;
+            }
+            
+            .clinic-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .clinic-icon {
+                align-self: center;
+            }
+
+            .popup-content {
+                padding: 20px;
+                margin: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .modern-container {
+                padding: 25px 15px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .article-description h3 {
+                font-size: 1.3rem;
+            }
+            
+            .article-description p {
+                font-size: 0.9rem;
+            }
+            
+            .unlock-btn {
+                padding: 12px 24px;
+                min-width: 160px;
+                font-size: 0.9rem;
+            }
+            
+            .feature-item {
+                padding: 12px;
+            }
+        }
+    </style>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="modern-container">
+        <h1>Unlock Content</h1>
+        <div class="subtitle">VIP Exclusive Access</div>
+        
+        <!-- Locked Content Area -->
+        <div class="locked-content" id="lockedContent">
+            <h3><i class="fas fa-lock"></i> Content Locked</h3>
+            <p>Click the unlock button below to access our premium content library</p>
+            
+            <button class="unlock-btn" id="unlockBtn">
+                <i class="fas fa-gem"></i> Unlock Now
+            </button>
+        </div>
+        
+        <!-- Article Description Section -->
+        <div class="article-description">
+            <div class="article-header">
+                <div class="category">Healthcare / Sleep Therapy</div>
+                <h3><i class="fas fa-moon"></i> Best Sleep Clinics in London</h3>
+                <p class="article-intro">Comprehensive Guide to London's Top-Rated Sleep Disorder Treatment Centers & Advanced Therapy Solutions</p>
+            </div>
+
+            <p>London boasts some of the world's most advanced sleep clinics, offering cutting-edge treatments for various sleep disorders. From insomnia and sleep apnea to narcolepsy and restless leg syndrome, these clinics provide comprehensive diagnostic and therapeutic services with exceptional patient care.</p>
+
+            <h4 class="section-title"><i class="fas fa-hospital"></i> Premier Sleep Clinics</h4>
+
+            <div class="clinic-section">
+                <div class="clinic-header">
+                    <div class="clinic-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="clinic-title">
+                        <h4>The London Sleep Centre</h4>
+                        <div class="clinic-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Harley Street, London
+                        </div>
+                    </div>
+                </div>
+                
+                <p>One of London's most prestigious sleep clinics, offering state-of-the-art facilities in the renowned Harley Street medical district. Specializes in complex sleep disorders and provides multidisciplinary approaches to treatment.</p>
+                
+                <div class="clinic-features">
+                    <div class="feature-item">
+                        <i class="fas fa-stethoscope"></i>
+                        <div class="feature-content">
+                            <div class="feature-title">Expert Medical Team</div>
+                            <div class="feature-desc">Consultant neurologists, respiratory physicians, and clinical psychologists specializing exclusively in sleep medicine</div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-microscope"></i>
+                        <div class="feature-content">
+                            <div class="feature-title">Advanced Diagnostics</div>
+                            <div class="feature-desc">Comprehensive polysomnography, multiple sleep latency tests, actigraphy services, and home sleep testing</div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-brain"></i>
+                        <div class="feature-content">
+                            <div class="feature-title">CBT for Insomnia</div>
+                            <div class="feature-desc">Specialized cognitive behavioral therapy programs specifically designed for chronic insomnia treatment</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.8/5 Rating (Google Reviews)</span>
+                </div>
+            </div>
+
+            <div class="clinic-section">
+                <div class="clinic-header">
+                    <div class="clinic-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="clinic-title">
+                        <h4>The Sleep Disorders Clinic</h4>
+                        <div class="clinic-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            The Wellington Hospital, London
+                        </div>
+                    </div>
+                </div>
+                
+                <p>Located in the prestigious The Wellington Hospital, this clinic offers comprehensive sleep studies and personalized treatment plans for both adults and children with various sleep disorders.</p>
+                
+                <div class="clinic-features">
+                    <div class="feature-item">
+                        <i class="fas fa-home"></i>
+                        <div class="feature-content">
+                            <div class="feature-title">Home Sleep Tests</div>
+                            <div class="feature-desc">Convenient at-home sleep monitoring equipment with professional analysis and detailed reporting</div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-wind"></i>
+                        <div class="feature-content">
+                            <div class="feature-title">CPAP Therapy Management</div>
+                            <div class="feature-desc">Advanced CPAP and BiPAP machines with personalized mask fitting and ongoing technical support</div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-child"></i>
+                        <div class="feature-content">
+                            <div class="feature-title">Pediatric Sleep Specialists</div>
+                            <div class="feature-desc">Dedicated team for children's sleep disorders including behavioral insomnia and sleep apnea</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9/5 Rating (Patient Reviews)</span>
+                </div>
+            </div>
+
+            <div class="treatment-section">
+                <h4 class="section-title"><i class="fas fa-stethoscope"></i> Available Treatments</h4>
+                <div class="treatment-grid">
+                    <div class="treatment-item">Insomnia Treatment</div>
+                    <div class="treatment-item">Sleep Apnea Management</div>
+                    <div class="treatment-item">Narcolepsy Care</div>
+                    <div class="treatment-item">Restless Legs Syndrome</div>
+                    <div class="treatment-item">Circadian Rhythm Disorders</div>
+                    <div class="treatment-item">Parasomnia Treatment</div>
+                    <div class="treatment-item">Sleepwalking Therapy</div>
+                    <div class="treatment-item">Night Terror Management</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h5><i class="fas fa-file-invoice-dollar"></i> Insurance & Pricing</h5>
+                <p>Most clinics accept major private health insurance providers including Bupa, AXA PPP, and Vitality. Self-pay options start from £250 for initial consultations and £800-£1500 for comprehensive sleep studies with detailed analysis.</p>
+            </div>
+            
+            <div class="info-box">
+                <h5><i class="fas fa-clock"></i> Appointment Availability</h5>
+                <p>Private appointments typically available within 2-3 weeks. Most clinics offer urgent appointments for severe cases within 5-7 working days. Telemedicine consultations available for initial assessments.</p>
+            </div>
+        </div>
+        
+        <!-- Unlock Process -->
+        <div class="unlock-process" id="unlockProcess">
+            <div class="loading-circle"></div>
+            <div class="loading-text">Unlocking premium content...</div>
+        </div>
+    </div>
+
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <h3><i class="fas fa-external-link-alt"></i> Open Premium Content</h3>
+            <p>Click the button below to access exclusive content</p>
+            <button class="popup-btn" id="popupOpenBtn">
+                <i class="fas fa-external-link-alt"></i> Open Content
+            </button>
+            <button class="popup-btn" id="popupCloseBtn" style="background: rgba(255,255,255,0.1);">
+                <i class="fas fa-times"></i> Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Copyright Watermark -->
+    <div class="copyright-notice">
+        © 2025 VIP Content Network | Unauthorized access prohibited.
+    </div>
+
+    <script>
+        let contentUnlocked = false;
+        let popupOpened = false;
+        let refreshCountdown = 7;
+
+        // Handle unlock button click
+        function handleUnlockClick() {
+            // Show popup instead of directly opening
+            document.getElementById('popupOverlay').style.display = 'flex';
+            popupOpened = true;
+        }
+
+        // Handle popup open button click
+        function handlePopupOpen() {
+            if (contentUnlocked) return;
+            
+            contentUnlocked = true;
+            
+            // Hide popup and show loading
+            document.getElementById('popupOverlay').style.display = 'none';
+            document.getElementById("lockedContent").style.display = 'none';
+            document.getElementById("unlockProcess").style.display = 'flex';
+
+            // Open the website in a new tab
+            window.open('https://www.videohub.space/day/2897e503-9d21-4e1e-a679-2b76e82b47f9', '_blank');
+
+            // Show success message
+            setTimeout(() => {
+                document.getElementById("unlockProcess").innerHTML = `
+                    <div style="color: var(--gold); font-size: 1.5rem; margin-bottom: 15px;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="loading-text">Access Granted! Enjoy your premium content.</div>
+                `;
+            }, 2000);
+        }
+
+        // Handle popup close
+        function handlePopupClose() {
+            document.getElementById('popupOverlay').style.display = 'none';
+        }
+
+        // Initialize buttons
+        document.getElementById('unlockBtn').addEventListener('click', handleUnlockClick);
+        document.getElementById('popupOpenBtn').addEventListener('click', handlePopupOpen);
+        document.getElementById('popupCloseBtn').addEventListener('click', handlePopupClose);
+
+        // Auto popup after 3 seconds
+        setTimeout(() => {
+            if (!contentUnlocked && !popupOpened) {
+                document.getElementById('popupOverlay').style.display = 'flex';
+                popupOpened = true;
+            }
+        }, 3000);
+
+        // Page refresh after 7 seconds (hidden from user)
+        setTimeout(() => {
+            if (!contentUnlocked) {
+                location.reload();
+            }
+        }, 7000);
+
+        // Content protection
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        }, false);
+
+        document.addEventListener('keyup', (e) => {
+            if (e.key === 'PrintScreen') {
+                const notice = document.querySelector('.copyright-notice');
+                notice.style.color = 'rgba(255,255,255,0.8)';
+                setTimeout(() => {
+                    notice.style.color = 'rgba(255,255,255,0.35)';
+                }, 3000);
+            }
+        });
+
+        // Close popup when clicking outside
+        document.getElementById('popupOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                handlePopupClose();
+            }
+        });
+    </script>
+</body>
+</html>
